@@ -2,34 +2,21 @@
 
 int main(void){
     list* linkedList = create_list();
-    char *testStrings[] = {
-        "apple",
-        "banana",
-        "cherry",
-        "date",
-        "elderberry",
-        "fig",
-        "grape",
-        "honeydew",
-        "kiwi",
-        "lemon"
-    };
-
-    int numStrings = sizeof(testStrings) / sizeof(testStrings[0]);
 
     printf("Creating the list... State of the list: ");
     linkedList != NULL ? puts("The list exists\n") : puts("The list does not exist\n"); 
-
-    puts("Loading the list with the following strings:");
-    for(int i = 0; i < numStrings; i++){
-        if(i == numStrings - 1){
-            printf(" %s", testStrings[i]);
-        }
-        else{
-            printf(" %s,", testStrings[i]);
-        }
-        add_to_list(linkedList, testStrings[i]);
-    }
+    char* a = "S", *b = "I", *c = "G", *d = "R", *e = "O", *f = "C", *g = "E", *h = "v", *i = "O", *j = "L", *k = "I";
+    add_to_list(linkedList, a);
+    add_to_list(linkedList, b);
+    add_to_list(linkedList, c);
+    add_to_list(linkedList, d);
+    add_to_list(linkedList, e);
+    add_to_list(linkedList, f);
+    add_to_list(linkedList, g);
+    add_to_list(linkedList, h);
+    add_to_list(linkedList, i);
+    add_to_list(linkedList, j);
+    add_to_list(linkedList, k);
 
     puts("\n");
     puts("Printing list: ");
@@ -50,6 +37,7 @@ int main(void){
 
     puts("\nFreeing list...");
     free_list(linkedList);
+    linkedList = NULL;
     linkedList != NULL ? puts("The list still exists\n") : puts("The list no longer exists\n"); 
 
 }
