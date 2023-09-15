@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 typedef struct Node node;
 typedef struct List list;
 
