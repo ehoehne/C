@@ -31,7 +31,7 @@ int main(void){
     puts("\nCurrent list: ");
     print_list(linkedList);
 
-    puts("\n Flushing list...");
+    puts("\nFlushing list...");
     flush_list(linkedList);
     linkedList != NULL ? puts("State of list after flush: The list exists\n") : puts("State of list after flush: The list does not exist\n"); 
 
