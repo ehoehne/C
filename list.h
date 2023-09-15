@@ -14,7 +14,6 @@ struct Node{
 
 struct List{
     node *head;
-    node *tail;
     int size;
 };
 

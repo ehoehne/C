@@ -11,7 +11,14 @@ list* create_list(){
 //add a node to the list
 int add_to_list(list* ll, char *item){
     node* new_node = (node*)malloc(sizeof(node));
-    new_node->item = item;
+    new_node->item = strdup(item);
+
+    if(!ll->size){
+        ll->head = new_node;
+        ll->size++;
+        return 0;
+    }
+
     new_node->next = ll->head;
     ll->head = new_node;
     ll->size++;
@@ -24,7 +31,7 @@ char* remove_from_list(list* ll){
         return NULL;
     }
     node* node_to_remove = ll->head;
-    void* item = node_to_remove->item;
+    char* item = node_to_remove->item;
     ll->head = node_to_remove->next;
     free(node_to_remove);
     ll->size--;
@@ -34,9 +41,11 @@ char* remove_from_list(list* ll){
 //print the list 
 void print_list(list* ll){
     node* current = ll->head;
+    int count = ll->size;
     while (current != NULL) {
-        printf("%s\n", current->item);
+        printf("List item %d: %s\n", count, current->item);
         current = current->next;
+        count--;
     }
 }
 
