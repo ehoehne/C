@@ -49,8 +49,8 @@ int main(void) {
 
     // Free all memory associated with the list and nullify the list pointer
     puts("\nFreeing list...");
-    free_list(linkedList);
-    linkedList = NULL;
+    free_list(&linkedList);
+    
     // Check and print the final state of the list
     linkedList != NULL ? puts("The list still exists\n") : puts("The list no longer exists\n");
 
