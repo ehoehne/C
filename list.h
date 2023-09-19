@@ -58,6 +58,6 @@ void flush_list(list* ll);
  * Frees all memory associated with the list, including the list itself.
  * @param ll   Pointer to the list
  */
-void free_list(list* ll);
+void free_list(list** ll);
 
 #endif // LIST_H_
