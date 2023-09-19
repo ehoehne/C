@@ -9,7 +9,7 @@ int main(void) {
     linkedList != NULL ? puts("The list exists\n") : puts("The list does not exist\n");
 
     // Pre-defined string items to add to the list
-    char* a = "S", *b = "I", *c = "G", *d = "R", *e = "O", *f = "C", *g = "E", *h = "v", *i = "O", *j = "L", *k = "I";
+    char* a = "S", *b = "I", *c = "G", *d = "R", *e = "O", *f = "C", *g = "E", *h = "v", *z = "O", *j = "L", *k = "I";
 
     // Add each string item to the list
     add_to_list(linkedList, a);
@@ -20,7 +20,7 @@ int main(void) {
     add_to_list(linkedList, f);
     add_to_list(linkedList, g);
     add_to_list(linkedList, h);
-    add_to_list(linkedList, i);
+    add_to_list(linkedList, z);
     add_to_list(linkedList, j);
     add_to_list(linkedList, k);
 
@@ -32,7 +32,8 @@ int main(void) {
 
     // Remove the first three items from the list
     puts("Removing first 3 items of the list:");
-    for (int i = 0; i < 3; i++) {
+    size_t i;
+    for (i = 0; i < 3; i++) {
         printf("Removing from list: %s\n", remove_from_list(linkedList));
     }
 
